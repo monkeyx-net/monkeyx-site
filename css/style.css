@@ -585,18 +585,22 @@ pre code {
     margin-right: 0.3rem;
 }
 .filter-select {
-    background: transparent;
+    background: var(--bg-card);
     color: var(--green);
     border: 1px solid var(--green-dim);
     font-family: monospace;
     font-size: 0.75rem;
-    padding: 0.2rem 0.65rem;
+    padding: 0.2rem 1.2rem 0.2rem 0.65rem;
     cursor: pointer;
     letter-spacing: 0.5px;
     min-height: 30px;
     outline: none;
     appearance: none;
     -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath fill='%2333ff33' d='M0 0l4 4 4-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.4rem center;
+    background-size: 8px;
 }
 .filter-select:hover,
 .filter-select:focus {
@@ -909,6 +913,8 @@ body.theme-light .toggle-scan {
     }
     .nav-hamburger {
         display: block;
+        border-color: var(--green);
+        color: var(--green-bright);
     }
     .nav-collapse {
         display: none;
@@ -930,11 +936,15 @@ body.theme-light .toggle-scan {
     .nav-sep {
         display: none;
     }
+    .nav-collapse {
+        background: var(--nav-bg);
+    }
     .top-nav a {
         padding: 0.25rem 0.45rem;
         min-height: 36px;
         display: flex;
         align-items: center;
+        color: var(--green-bright);
     }
     .grid-games {
         grid-template-columns: 1fr 1fr;
@@ -1011,6 +1021,8 @@ body.theme-light .toggle-scan {
     .theme-btn {
         flex: 1;
         text-align: center;
+        color: var(--green);
+        border-color: var(--green);
     }
     .nav-logo-img {
         height: 28px;
@@ -1019,10 +1031,15 @@ body.theme-light .toggle-scan {
         font-size: 0.72rem;
         padding: 0.25rem 0.35rem;
         min-height: 40px;
+        color: var(--green-bright);
     }
     .grid-games {
         grid-template-columns: 1fr;
         gap: 0.75rem;
+    }
+    .filter-select {
+        min-height: 36px;
+        font-size: 0.82rem;
     }
     .grid-sections {
         grid-template-columns: 1fr;
