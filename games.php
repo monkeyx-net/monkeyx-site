@@ -55,7 +55,7 @@ require "includes/head.php";
         <div class="game-title">SPACE PATROL</div>
         <span class="game-tag">SHOOTER</span><span class="game-tag">1-2P</span>
         <div class="game-stars">★★★★☆</div>
-        <div class="game-platform">C64 · Genesis · HTML5</div>
+        <div class="game-platform">Arcade · Genesis · HTML5</div>
         <div class="game-desc">Vertical shooter with alien formation waves, parallax starfield, and SID audio port.</div>
         <a href="#" class="game-play">[INFO]</a>
     </div>
