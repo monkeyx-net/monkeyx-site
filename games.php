@@ -11,14 +11,16 @@ require "includes/head.php";
 
 <div class="filter-bar">
     <span class="filter-label">FILTER://</span>
-    <button class="filter-btn active" data-filter="all">[ALL]</button>
-    <button class="filter-btn" data-filter="adventure">[ADVENTURE]</button>
-    <button class="filter-btn" data-filter="arcade">[ARCADE]</button>
-    <button class="filter-btn" data-filter="amiga">[AMIGA]</button>
-    <button class="filter-btn" data-filter="platform">[PLATFORM]</button>
-    <button class="filter-btn" data-filter="puzzle">[PUZZLE]</button>
-    <button class="filter-btn" data-filter="roguelike">[ROGUELIKE]</button>
-    <button class="filter-btn" data-filter="racer">[RACER]</button>
+    <select class="filter-select" id="filterSelect">
+        <option value="all" selected>[ALL]</option>
+        <option value="adventure">[ADVENTURE]</option>
+        <option value="arcade">[ARCADE]</option>
+        <option value="amiga">[AMIGA]</option>
+        <option value="platform">[PLATFORM]</option>
+        <option value="puzzle">[PUZZLE]</option>
+        <option value="roguelike">[ROGUELIKE]</option>
+        <option value="racer">[RACER]</option>
+    </select>
 </div>
 
 <div class="grid-games">

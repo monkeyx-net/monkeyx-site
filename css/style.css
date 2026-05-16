@@ -584,7 +584,7 @@ pre code {
     color: var(--green-dim);
     margin-right: 0.3rem;
 }
-.filter-btn {
+.filter-select {
     background: transparent;
     color: var(--green);
     border: 1px solid var(--green-dim);
@@ -593,23 +593,19 @@ pre code {
     padding: 0.2rem 0.65rem;
     cursor: pointer;
     letter-spacing: 0.5px;
-    transition: all 0.08s linear;
     min-height: 30px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
-.filter-btn:hover {
+.filter-select:hover,
+.filter-select:focus {
     border-color: var(--green);
-    background: var(--bg-code);
     color: var(--green-bright);
 }
-.filter-btn.active {
-    border-color: var(--green);
-    background: var(--bg-code);
-    color: var(--green-bright);
-}
-.filter-sep {
-    color: #0f5a0f;
-    margin: 0 0.4rem;
-    font-size: 0.8rem;
+.filter-select option {
+    background: #000;
+    color: var(--green);
 }
 .sort-select {
     background: transparent;

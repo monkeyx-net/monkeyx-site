@@ -1,9 +1,9 @@
 (function () {
-    const btns    = document.querySelectorAll('.filter-btn');
-    const grid    = document.querySelector('.grid-games');
-    const countEl = document.getElementById('game-count');
-    const sortSel = document.getElementById('sortSelect');
-    if (!btns.length || !grid) return;
+    const filterSel = document.getElementById('filterSelect');
+    const grid      = document.querySelector('.grid-games');
+    const countEl   = document.getElementById('game-count');
+    const sortSel   = document.getElementById('sortSelect');
+    if (!filterSel || !grid) return;
 
     const totalCards = grid.querySelectorAll('.game-card').length;
     let activeFilter = 'all';
@@ -35,13 +35,9 @@
         if (countEl) countEl.textContent = visible + ' title' + (visible !== 1 ? 's' : '') + (visible < totalCards ? ' of ' + totalCards : '');
     }
 
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            activeFilter = btn.getAttribute('data-filter');
-            btns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            render();
-        });
+    filterSel.addEventListener('change', () => {
+        activeFilter = filterSel.value;
+        render();
     });
 
     if (sortSel) sortSel.addEventListener('change', render);
