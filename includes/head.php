@@ -63,6 +63,7 @@ $game_urls = [
                 : "" ?>>&gt;TOOLS</a>
         </div>
         <div class="theme-switcher">
+            <span class="filter-label">THEME:</span>
             <div class="filter-select-wrap">
                 <select class="filter-select" id="themeSelect">
                     <option value="green">[GREEN]</option>
