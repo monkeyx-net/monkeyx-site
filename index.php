@@ -99,7 +99,7 @@ require "includes/head.php";
         <span class="sc-cmd">$ cd /godot</span>
         <img src="images/icons/godot.svg" class="sc-icon" alt="" aria-hidden="true">
         <div class="sc-title">GODOT 4</div>
-        <div class="sc-desc">Pixel-perfect retro pipelines. CRT shaders, low-res viewports, palette restrictions.</div>
+        <div class="sc-desc">Pixel-perfect retro pipelines. 2D pixels, CRT shaders, low-res viewports, palette restrictions.</div>
         <span class="sc-go">[ENTER ▶]</span>
     </a>
     <a href="love2d" class="section-card">
