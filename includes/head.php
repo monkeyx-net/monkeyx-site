@@ -63,9 +63,14 @@ $game_urls = [
                 : "" ?>>&gt;TOOLS</a>
         </div>
         <div class="theme-switcher">
-            <button class="theme-btn" data-theme="green">GREEN</button>
-            <button class="theme-btn" data-theme="dark">DARK</button>
-            <button class="theme-btn" data-theme="light">LIGHT</button>
+            <div class="filter-select-wrap">
+                <select class="filter-select" id="themeSelect">
+                    <option value="green">[GREEN]</option>
+                    <option value="dark">[DARK]</option>
+                    <option value="light">[LIGHT]</option>
+                </select>
+                <span class="filter-select-label" aria-hidden="true">[GREEN] <span class="filter-arrow">▾</span></span>
+            </div>
         </div>
     </div>
 </nav>

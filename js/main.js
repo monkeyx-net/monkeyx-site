@@ -19,21 +19,25 @@
     /* THEME SWITCHER */
     const themes = ['green', 'dark', 'light'];
     const saved = localStorage.getItem('theme') || 'green';
+    const themeSel = document.getElementById('themeSelect');
+    const themeLabel = document.querySelector('.theme-switcher .filter-select-label');
 
     function applyTheme(theme) {
         document.body.classList.remove(...themes.map(t => 'theme-' + t));
         if (theme !== 'green') document.body.classList.add('theme-' + theme);
-        document.querySelectorAll('.theme-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.theme === theme);
-        });
+        if (themeSel) themeSel.value = theme;
+        if (themeLabel) {
+            const opt = themeSel.options[themeSel.selectedIndex];
+            themeLabel.innerHTML = opt.text + ' <span class="filter-arrow">▾</span>';
+        }
         localStorage.setItem('theme', theme);
     }
 
     applyTheme(saved);
 
-    document.querySelectorAll('.theme-btn').forEach(btn => {
-        btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
-    });
+    if (themeSel) {
+        themeSel.addEventListener('change', () => applyTheme(themeSel.value));
+    }
 
 
     /* CLOCK – only runs if #sys-time exists (home page) */
