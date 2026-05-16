@@ -24,7 +24,9 @@ require "includes/head.php";
 <div class="grid-games">
     <div class="game-card" data-platforms="arcade" data-rating="5" data-name="SPACE INVADERS PART II">
         <div class="game-cover">
-            <a href="<?= $game_urls["space-invaders-part-ii"] ?>" class="cover-link"><img src="images/games/space_invaders_part_2.webp" alt="Space Invaders Part II"></a>
+            <a href="<?= $game_urls[
+                "space-invaders-part-ii"
+            ] ?>" class="cover-link"><img src="images/games/space_invaders_part_2.webp" alt="Space Invaders Part II"></a>
         </div>
         <div class="game-title">SPACE INVADERS PART II</div>
         <span class="game-tag">ARCADE</span><span class="game-tag">1P</span>
@@ -35,7 +37,9 @@ require "includes/head.php";
     </div>
     <div class="game-card" data-platforms="platform" data-rating="5" data-name="MANIC MINER">
         <div class="game-cover">
-            <a href="<?= $game_urls["manic-miner"] ?>" class="cover-link"><img src="images/games/manic_miner.webp" alt="Manic Miner"></a>
+            <a href="<?= $game_urls[
+                "manic-miner"
+            ] ?>" class="cover-link"><img src="images/games/manic_miner.webp" alt="Manic Miner"></a>
         </div>
         <div class="game-title">MANIC MINER</div>
         <span class="game-tag">PLATFORM</span><span class="game-tag">1P</span>
@@ -44,7 +48,7 @@ require "includes/head.php";
         <div class="game-desc">One of the best original platform games. Orginal game by Matthew Smith. Check the level editor!</div>
         <a href="manic-miner" class="game-play">[INFO]</a>
     </div>
-    <div class="game-card" data-platforms="c64 genesis html5" data-rating="4" data-name="SPACE PATROL">
+    <div class="game-card" data-platforms="arcade genesis html5" data-rating="4" data-name="SPACE PATROL">
         <div class="game-cover">
             <a href="#" class="cover-link"><img src="https://placehold.co/400x200/051005/33ff33?text=SPACE+PATROL&font=playfair-display" alt="Space Patrol"></a>
         </div>
