@@ -35,8 +35,13 @@
         if (countEl) countEl.textContent = visible + ' title' + (visible !== 1 ? 's' : '') + (visible < totalCards ? ' of ' + totalCards : '');
     }
 
+    const labelEl = document.querySelector('.filter-select-label');
     filterSel.addEventListener('change', () => {
         activeFilter = filterSel.value;
+        if (labelEl) {
+            const opt = filterSel.options[filterSel.selectedIndex];
+            labelEl.innerHTML = opt.text + ' <span class="filter-arrow">▾</span>';
+        }
         render();
     });
 

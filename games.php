@@ -11,16 +11,19 @@ require "includes/head.php";
 
 <div class="filter-bar">
     <span class="filter-label">FILTER://</span>
-    <select class="filter-select" id="filterSelect">
-        <option value="all" selected>[ALL]</option>
-        <option value="adventure">[ADVENTURE]</option>
-        <option value="arcade">[ARCADE]</option>
-        <option value="amiga">[AMIGA]</option>
-        <option value="platform">[PLATFORM]</option>
-        <option value="puzzle">[PUZZLE]</option>
-        <option value="roguelike">[ROGUELIKE]</option>
-        <option value="racer">[RACER]</option>
-    </select>
+    <div class="filter-select-wrap">
+        <select class="filter-select" id="filterSelect">
+            <option value="all" selected>[ALL]</option>
+            <option value="adventure">[ADVENTURE]</option>
+            <option value="arcade">[ARCADE]</option>
+            <option value="amiga">[AMIGA]</option>
+            <option value="platform">[PLATFORM]</option>
+            <option value="puzzle">[PUZZLE]</option>
+            <option value="roguelike">[ROGUELIKE]</option>
+            <option value="racer">[RACER]</option>
+        </select>
+        <span class="filter-select-label" aria-hidden="true">[ALL] <span class="filter-arrow">▾</span></span>
+    </div>
 </div>
 
 <div class="grid-games">
