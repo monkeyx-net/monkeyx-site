@@ -1,11 +1,11 @@
 <?php
 $post_meta = [
-    "title" => "Hello, Retro Terminal",
+    "title" => "File Server CopyParty",
     "date" => "2026-06-04",
-    "slug" => "hello-retro-terminal",
-    "tags" => ["meta", "site"],
+    "slug" => "file-server-copyparty",
+    "tags" => ["tools", "fileserver"],
     "summary" =>
-        "Welcome to the Retro Games Terminal blog — a place for devlogs, tutorials, and deep-dives into retro game development.",
+        "Welcome to the Retro Games File Server CopyParty blog — a place for devlogs, tutorials, and deep-dives into retro game development.",
 ]; ?>
 <p>Welcome to the blog section of Retro Games Terminal. This is where I'll be posting devlogs, tutorials, and deeper explorations of the tools and techniques behind the games and ports on this site.</p>
 
