@@ -4,6 +4,7 @@ $post_meta = [
     "date" => "2026-06-04",
     "slug" => "hello-retro-terminal",
     "tags" => ["meta", "site"],
+    "image" => "images/blog/hello-retro-terminal.webp",
     "summary" =>
         "Welcome to the Retro Games Terminal blog — a place for devlogs, tutorials, and deep-dives into retro game development.",
 ]; ?>

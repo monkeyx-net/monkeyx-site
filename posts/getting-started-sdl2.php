@@ -4,6 +4,7 @@ $post_meta = [
     'date'    => '2026-05-20',
     'slug'    => 'getting-started-sdl2',
     'tags'    => ['sdl2', 'tutorial', 'c'],
+    'image'   => 'images/blog/getting-started-sdl2.webp',
     'summary' => 'A minimal SDL2 setup in C: window creation, the event loop, and rendering a moving sprite — covering the exact boilerplate you need to build on.',
 ];
 ?>

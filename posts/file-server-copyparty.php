@@ -4,6 +4,7 @@ $post_meta = [
     "date" => "2026-06-04",
     "slug" => "file-server-copyparty",
     "tags" => ["tools", "fileserver"],
+    "image" => "images/blog/file-server-copyparty.webp",
     "summary" =>
         "Welcome to the Retro Games File Server CopyParty blog — a place for devlogs, tutorials, and deep-dives into retro game development.",
 ]; ?>
@@ -20,17 +21,5 @@ $post_meta = [
     notes/portmaster-rg35xx-gotchas.md<br>
     <span class="cursor-blink"></span>
 </div>
-
-<h2>// HOW POSTS ARE STORED</h2>
-<p>Each post is a plain PHP file under <code>posts/</code> with a metadata array at the top and raw HTML content below. No database, no CMS, no markdown parser — just the same stack the rest of this site runs on.</p>
-
-<div class="code-block"><pre><code>$post_meta = [
-    'title'   => 'Post Title',
-    'date'    => '2026-06-04',
-    'slug'    => 'post-slug',
-    'tags'    => ['tag1', 'tag2'],
-    'summary' => 'Short description for RSS readers.',
-    'image'   => 'images/blog/cover.webp', // optional
-];</code></pre></div>
 
 <p>Subscribe via <a href="/feed">RSS</a> to get new posts in your feed reader of choice.</p>
