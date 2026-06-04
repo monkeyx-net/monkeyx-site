@@ -17,50 +17,52 @@ $game_urls = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title><?= $page_title ?></title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml" title="Retro Games Terminal Blog" href="/feed">
 </head>
 <body>
 <nav class="top-nav">
-    <a href="index" class="nav-logo<?= $current_page === "index"
+    <a href="/index" class="nav-logo<?= $current_page === "index"
         ? " nav-active"
         : "" ?>">
-        <img src="<?= str_repeat(
-            "../",
-            substr_count($current_page, "/"),
-        ) ?>images/logo.png" class="nav-logo-img" alt="logo">
+        <img src="/images/logo.png" class="nav-logo-img" alt="logo">
     </a>
     <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">&#9776;</button>
     <div class="nav-collapse" id="navCollapse">
         <div class="nav-links">
-            <a href="games"<?= $current_page === "games"
+            <a href="/games"<?= $current_page === "games"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;GAMES</a>
             <span class="nav-sep">|</span>
-            <a href="sdl2"<?= $current_page === "sdl2"
+            <a href="/sdl2"<?= $current_page === "sdl2"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;SDL2/C</a>
             <span class="nav-sep">|</span>
-            <a href="godot"<?= $current_page === "godot"
+            <a href="/godot"<?= $current_page === "godot"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;GODOT</a>
             <span class="nav-sep">|</span>
-            <a href="love2d"<?= $current_page === "love2d"
+            <a href="/love2d"<?= $current_page === "love2d"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;LÖVE2D</a>
             <span class="nav-sep">|</span>
-            <a href="portmaster"<?= $current_page === "portmaster"
+            <a href="/portmaster"<?= $current_page === "portmaster"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;PORTMASTER</a>
             <span class="nav-sep">|</span>
-            <a href="hardware"<?= $current_page === "hardware"
+            <a href="/hardware"<?= $current_page === "hardware"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;8/16BIT</a>
             <span class="nav-sep">|</span>
-            <a href="tools"<?= $current_page === "tools"
+            <a href="/tools"<?= $current_page === "tools"
                 ? ' class="nav-active"'
                 : "" ?>>&gt;TOOLS</a>
+            <span class="nav-sep">|</span>
+            <a href="/blog"<?= $current_page === "blog"
+                ? ' class="nav-active"'
+                : "" ?>>&gt;BLOG</a>
         </div>
         <div class="theme-switcher">
             <span class="filter-label">THEME:</span>
