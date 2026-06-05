@@ -8,7 +8,7 @@ $post_meta = [
     "summary" =>
         "Welcome to the Retro Games File Server CopyParty blog — a place for devlogs, tutorials, and deep-dives into retro game development.",
 ]; ?>
-<p>Welcome to the blog section of Retro Games Terminal. This is where I'll be posting devlogs, tutorials, and deeper explorations of the tools and techniques behind the games and ports on this site.</p>
+<p>Welcome to the blog section of Retro Games Non Terminal. This is where I'll be posting devlogs, tutorials, and deeper explorations of the tools and techniques behind the games and ports on this site.</p>
 
 <h2>// WHAT TO EXPECT</h2>
 <p>Posts will cover topics across the stack — from low-level C/SDL2 rendering to Godot 4 shaders, LÖVE2D quirks, and PortMaster porting notes. The goal is to document real problems and their solutions, not sanitised write-ups.</p>
