@@ -33,7 +33,7 @@ require "includes/head.php";
  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
  ──────────────────────────────────────────
  GREEN SCREEN  ·  8 &amp; 16 BIT  ·  DEV + PLAY</pre>
-    <img src="images/logo.png" class="banner-logo" alt="" aria-hidden="true">
+    <img src="images/logo.webp" class="banner-logo" alt="" aria-hidden="true">
 </div>
 
 <!-- SYSTEM STATUS BAR -->
@@ -48,7 +48,7 @@ require "includes/head.php";
 
 <!-- INTRODUCTION -->
 <div class="intro-block">
-    <img src="images/monkeyx.png" class="intro-monkey" alt="" aria-hidden="true">
+    <img src="images/monkeyx.webp" class="intro-monkey" alt="" aria-hidden="true">
     <p class="intro-lead">
         Rescuing classic 8 &amp; 16-bit games from obsolescence — converting them to run on modern hardware so anyone can play them, today.
     </p>

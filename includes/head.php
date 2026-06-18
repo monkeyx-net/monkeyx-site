@@ -27,7 +27,7 @@ $game_urls = [
     <a href="/index" class="nav-logo<?= $current_page === "index"
         ? " nav-active"
         : "" ?>">
-        <img src="/images/logo.png" class="nav-logo-img" alt="logo">
+        <img src="/images/logo.webp" class="nav-logo-img" alt="logo">
     </a>
     <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">&#9776;</button>
     <div class="nav-collapse" id="navCollapse">
