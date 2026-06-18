@@ -130,7 +130,13 @@ require "includes/head.php";
         <div class="sc-desc">SDL2, Godot shaders, LÖVE2D wiki, VICE, FS-UAE, BlastEm, Mesen and more.</div>
         <span class="sc-go">[ENTER ▶]</span>
     </a>
-
+    <a href="blog" class="section-card">
+        <span class="sc-cmd">$ cd /blog</span>
+        <img src="images/icons/blog.svg" class="sc-icon" alt="" aria-hidden="true">
+        <div class="sc-title">BLOG</div>
+        <div class="sc-desc">What's going on at monkeyx.net. Tutorials and deep dives into retro technology.</div>
+        <span class="sc-go">[ENTER ▶]</span>
+    </a>
 </div>
 
 <script>(function(){var c=document.querySelectorAll('.section-card').length;document.getElementById('module-count').textContent=c})();</script>
