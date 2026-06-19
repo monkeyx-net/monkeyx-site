@@ -20,6 +20,7 @@
     --nav-bg: rgba(0, 0, 0, 0.97);
     --terminal-bg: rgba(0, 0, 0, 0.92);
     --crt: 1;
+    --scanline: rgba(0, 255, 0, 0.028);
 }
 
 /* ── DARK THEME ── */
@@ -37,6 +38,7 @@ body.theme-dark {
     --border: #30363d;
     --nav-bg: rgba(13, 17, 23, 0.97);
     --terminal-bg: rgba(13, 17, 23, 0.95);
+    --scanline: rgba(255, 255, 255, 0.04);
 }
 
 /* ── LIGHT THEME ── */
@@ -51,6 +53,7 @@ body.theme-light {
     --border: #cccccc;
     --nav-bg: rgba(255, 255, 255, 0.98);
     --terminal-bg: rgba(255, 255, 255, 1);
+    --scanline: rgba(0, 0, 0, 0.05);
 }
 
 /* light theme element overrides */
@@ -84,9 +87,6 @@ body.theme-light .intro-block {
 }
 body.theme-light .status-bar .s-label {
     color: #777777;
-}
-body.theme-light .toggle-scan {
-    display: none;
 }
 
 html {
@@ -147,8 +147,6 @@ body.theme-light {
     animation: none;
 }
 
-body.theme-dark::before,
-body.theme-light::before,
 body.theme-dark::after,
 body.theme-light::after {
     display: none;
@@ -180,8 +178,8 @@ body::before {
     height: 100%;
     background: repeating-linear-gradient(
         0deg,
-        rgba(0, 255, 0, 0.028) 0px,
-        rgba(0, 255, 0, 0.028) 2px,
+        var(--scanline) 0px,
+        var(--scanline) 2px,
         transparent 2px,
         transparent 5px
     );
@@ -875,17 +873,12 @@ pre code {
     line-height: 2;
 }
 
-body.theme-dark .toggle-scan,
-body.theme-light .toggle-scan {
-    display: none;
-}
-
 /* SCANLINE TOGGLE */
 .toggle-scan {
     position: fixed;
     bottom: 12px;
     right: 12px;
-    background: #000;
+    background: var(--bg);
     color: var(--green);
     border: 1px solid var(--green-dim);
     font-family: monospace;
@@ -897,7 +890,7 @@ body.theme-light .toggle-scan {
 }
 .toggle-scan:hover {
     opacity: 1;
-    background: #0a1a0a;
+    background: var(--bg-code);
     border-color: var(--green);
 }
 
