@@ -106,7 +106,7 @@ require "includes/head.php";
         <span class="sc-cmd">$ cd /love2d</span>
         <img src="images/icons/love2d.svg" class="sc-icon" alt="" aria-hidden="true">
         <div class="sc-title">LÖVE2D</div>
-        <div class="sc-desc">Lua-powered prototyping. Fast iteration for game jams and 8-bit RPGs.</div>
+        <div class="sc-desc">Lua-powered prototyping. Fast iteration for game jams and 8-bit 2d games.</div>
         <span class="sc-go">[ENTER ▶]</span>
     </a>
     <a href="portmaster" class="section-card">
