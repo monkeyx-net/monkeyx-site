@@ -54,7 +54,7 @@ require "includes/head.php";
     </p>
     <div class="intro-body">
         <p>
-            This site documents the process of taking beloved games from machines like the <span class="hl">Commodore 64</span>, <span class="hl">ZX Spectrum</span>, <span class="hl">Amstrad CPC</span>, <span class="hl">BBC Micro</span> and <span class="hl">Amiga</span> and rebuilding them for contemporary systems using <span class="hl">C / SDL2</span>, <span class="hl">LÖVE2D</span>, <span class="hl">Godot 4</span> and <span class="hl">PortMaster</span> — keeping the original feel intact while opening the door to players on modern hardware.
+            This site documents the process of taking beloved retro games from machines like the <span class="hl">Commodore 64</span>, <span class="hl">ZX Spectrum</span>, <span class="hl">Amstrad CPC</span>, <span class="hl">BBC Micro</span> and <span class="hl">Amiga</span> and rebuilding them for contemporary systems using <span class="hl">C / SDL2</span>, <span class="hl">LÖVE2D</span>, <span class="hl">Godot 4</span> and <span class="hl">PortMaster</span> — keeping the original feel intact while opening the door to players on modern hardware.
         </p>
         <p>
             Alongside conversions, I repair and restore original 8/16-bit machines — diagnosing hardware faults, recapping boards, replacing failed chips — and document everything so the knowledge stays alive.
