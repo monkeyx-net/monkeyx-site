@@ -33,7 +33,6 @@ require "includes/head.php";
  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
  ──────────────────────────────────────────
  GREEN SCREEN  ·  8 &amp; 16 BIT  ·  DEV + PLAY</pre>
-    <img src="images/logo.webp" class="banner-logo" alt="" aria-hidden="true">
 </div>
 
 <!-- SYSTEM STATUS BAR -->
