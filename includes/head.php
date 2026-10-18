@@ -9,6 +9,7 @@ $game_play_url = isset($game_play_url) ? $game_play_url : "#";
 $game_urls = [
     "manic-miner" => "retro/games/manic-miner/",
     "space-invaders-part-ii" => "retro/games/space-invaders-part-ii/",
+    "robotron" => "retro/games/robotron/",
 ];
 ?>
 <!DOCTYPE html>

@@ -53,6 +53,19 @@ require "includes/head.php";
         <div class="game-desc">One of the best original platform games. Orginal game by Matthew Smith. Check the level editor!</div>
         <a href="manic-miner" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="ROBOTRON: 2084">
+        <div class="game-cover">
+            <a href="<?= $game_urls[
+                "robotron"
+            ] ?>" class="cover-link"><img src="https://placehold.co/400x200/051005/33ff33?text=ROBOTRON+2084&font=playfair-display" alt="Robotron: 2084"></a>
+        </div>
+        <div class="game-title">ROBOTRON: 2084</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of the 1982 Williams twin-stick arcade classic, with waves and enemy pacing traced from the original ROM.</div>
+        <a href="#" class="game-play">[INFO]</a>
+    </div>
     <div class="game-card" data-platforms="arcade genesis html5" data-rating="4" data-name="SPACE PATROL">
         <div class="game-cover">
             <a href="#" class="cover-link"><img src="https://placehold.co/400x200/051005/33ff33?text=SPACE+PATROL&font=playfair-display" alt="Space Patrol"></a>
