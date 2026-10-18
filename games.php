@@ -57,7 +57,7 @@ require "includes/head.php";
         <div class="game-cover">
             <a href="<?= $game_urls[
                 "robotron"
-            ] ?>" class="cover-link"><img src="https://placehold.co/400x200/051005/33ff33?text=ROBOTRON+2084&font=playfair-display" alt="Robotron: 2084"></a>
+            ] ?>" class="cover-link"><img src="images/games/robotron.webp" alt="Robotron: 2084"></a>
         </div>
         <div class="game-title">ROBOTRON: 2084</div>
         <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
