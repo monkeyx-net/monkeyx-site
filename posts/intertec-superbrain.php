@@ -8,7 +8,7 @@ $post_meta = [
     'summary' => 'Recently acquired in September 2026: an Intertec Data Systems SuperBrain, a 1979 all-in-one Z80 CP/M business machine with twin floppy drives built into its distinctive wedge-shaped case.',
 ];
 ?>
-<p>A new machine joined the collection in September 2026: an <strong>Intertec Data Systems SuperBrain</strong>. It's a UK-plugged unit with the original keyboard, the twin 5.25" drives, and decades of dust and yellowing on its beige keycaps. It hasn't been powered up yet. That will wait until it has had a proper inspection.</p>
+<p>A new machine joined the collection in September 2026: an <strong>Intertec Data Systems SuperBrain</strong>. It's a UK-plugged unit with the original keyboard, the twin 5.25" drives, and decades of dust and yellowing on its beige keycaps. It hasn't been powered up yet. That will have to wait until it has had a proper inspection.</p>
 
 <h2>// HISTORY</h2>
 <p>Intertec Data Systems was based in Columbia, South Carolina, and was best known for its video terminals. In 1979 it launched the SuperBrain, an all-in-one business microcomputer that put the CPU, display, keyboard and two floppy drives into a single moulded case. It sold for roughly $3,000. That was a lot of money, but much less than a minicomputer setup, which made it a serious option for small offices that wanted to run CP/M.</p>
