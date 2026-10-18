@@ -35,7 +35,7 @@ $post_meta = [
 <p>Here's the plan before it gets switched on:</p>
 <div class="command-line">
     <span class="prompt">$ cat restore-todo.txt</span><br>
-    [ ] strip down and clean the case and keyboard<br>
+    [x] strip down and clean the case and keyboard<br>
     [ ] inspect the PSU and replace any suspect capacitors<br>
     [ ] power up on a variac and check the CRT<br>
     [ ] clean and test both floppy drives<br>
