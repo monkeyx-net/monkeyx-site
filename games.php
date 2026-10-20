@@ -88,6 +88,7 @@ require "includes/head.php";
         <div class="game-desc">A C/SDL2 port of Williams' 1981 side-scrolling shooter, running the arcade ROM on an emulated board. Play it in your browser.</div>
         <a href="defender" class="game-play">[INFO]</a>
     </div>
+</div>
 
 <div class="command-line">
     <span class="prompt">$ ./launch --game=</span><em>[select title above]</em><br>
