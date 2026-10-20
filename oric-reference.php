@@ -57,6 +57,35 @@ DRAW dx,dy,fb       relative line
 CIRCLE r,fb         circle at cursor
 PING / SHOOT / EXPLODE / ZAP   built-in sound effects
 CLOAD "" / CSAVE "name"        tape load / save</code></pre></div>
+
+    <h2>// DOCUMENTATION</h2>
+    <div class="command-line">
+        <span class="prompt">$ ls docs/oric/</span><br>
+        ▸ <a href="/docs/oric/oric-service-manual.pdf">oric-service-manual.pdf</a> ... official Oric-1 and Atmos service manual (79 pages)<br>
+        ▸ <a href="/docs/oric/oric-psu-repair.pdf">oric-psu-repair.pdf</a> ... replacing a snapped earth pin on the original PSU<br>
+        ▸ <a href="/docs/oric/oric-microdisc-circuit-details.pdf">oric-microdisc-circuit-details.pdf</a> ... Microdisc controller component list<br>
+        ▸ <a href="/oric-repair-checklist">oric-repair-checklist</a> ... step-by-step mainboard repair checksheet, with photos (Mike Brown, <a href="https://oric.signal11.org.uk/html/repairguide.htm">oric.signal11.org.uk</a>)<br>
+        <span class="cursor-blink"></span>
+    </div>
+
+    <h2>// SCHEMATICS</h2>
+    <p>Click a diagram to open it full size.</p>
+    <div class="doc-schematics">
+        <figure>
+            <a href="/images/oric/oric-1-48k-bn0130.webp"><img src="/images/oric/oric-1-48k-bn0130.webp" alt="Oric-1 48K circuit diagram, BN0130" loading="lazy"></a>
+            <figcaption>Oric-1 48K main board (BN0130)</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/oric/microdisc-controller-bn0136.webp"><img src="/images/oric/microdisc-controller-bn0136.webp" alt="Microdisc disk controller circuit diagram, BN0136" loading="lazy"></a>
+            <figcaption>Microdisc disk controller (BN0136)</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/oric/microdisc-interface-schematic.webp"><img src="/images/oric/microdisc-interface-schematic.webp" alt="Oric disc interface PCB circuit diagram" loading="lazy"></a>
+            <figcaption>Oric disc interface PCB</figcaption>
+        </figure>
+    </div>
+
+    <p>Documents typed up and scanned by Steve Marshall. Many thanks to his site, <a href="http://www.48katmos.freeuk.com/">www.48katmos.freeuk.com</a>, for keeping this material available.</p>
 </div>
 
 <div class="tab-panel" id="tab-parts" role="tabpanel">

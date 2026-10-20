@@ -37,25 +37,29 @@ $game_urls = [
                 ? ' class="nav-active"'
                 : "" ?>>&gt;GAMES</a>
             <span class="nav-sep">|</span>
-            <a href="/sdl2"<?= $current_page === "sdl2"
-                ? ' class="nav-active"'
-                : "" ?>>&gt;SDL2/C</a>
-            <span class="nav-sep">|</span>
-            <a href="/godot"<?= $current_page === "godot"
-                ? ' class="nav-active"'
-                : "" ?>>&gt;GODOT</a>
-            <span class="nav-sep">|</span>
-            <a href="/love2d"<?= $current_page === "love2d"
-                ? ' class="nav-active"'
-                : "" ?>>&gt;LÖVE2D</a>
-            <span class="nav-sep">|</span>
-            <a href="/portmaster"<?= $current_page === "portmaster"
-                ? ' class="nav-active"'
-                : "" ?>>&gt;PORTMASTER</a>
+            <div class="nav-drop">
+                <span class="nav-drop-label<?= in_array($current_page, ["sdl2", "godot", "love2d", "portmaster"])
+                    ? " nav-active"
+                    : "" ?>" tabindex="0">&gt;CODING ▾</span>
+                <div class="nav-drop-menu">
+                    <a href="/sdl2"<?= $current_page === "sdl2"
+                        ? ' class="nav-active"'
+                        : "" ?>>&gt;SDL2/C</a>
+                    <a href="/godot"<?= $current_page === "godot"
+                        ? ' class="nav-active"'
+                        : "" ?>>&gt;GODOT</a>
+                    <a href="/love2d"<?= $current_page === "love2d"
+                        ? ' class="nav-active"'
+                        : "" ?>>&gt;LÖVE2D</a>
+                    <a href="/portmaster"<?= $current_page === "portmaster"
+                        ? ' class="nav-active"'
+                        : "" ?>>&gt;PORTMASTER</a>
+                </div>
+            </div>
             <span class="nav-sep">|</span>
             <a href="/hardware"<?= $current_page === "hardware"
                 ? ' class="nav-active"'
-                : "" ?>>&gt;8/16BIT</a>
+                : "" ?>>&gt;HARDWARE</a>
             <span class="nav-sep">|</span>
             <a href="/tools"<?= $current_page === "tools"
                 ? ' class="nav-active"'
