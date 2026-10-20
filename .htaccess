@@ -1,4 +1,6 @@
 Options -Indexes
+# Hide the git repo (deploys use git pull into the docroot) and .ht* files
+RedirectMatch 404 /\.(git|ht)
 RewriteEngine On
 # Blog post URLs: /blog/{slug} → post.php?slug={slug}
 RewriteRule ^blog/([a-z0-9-]+)$ post.php?slug=$1 [NC,L,QSA]

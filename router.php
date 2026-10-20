@@ -10,10 +10,30 @@ if ($path === '/' || $path === '') {
     $path = '/index.php';
 }
 
+function not_found($path)
+{
+    http_response_code(404);
+    echo "404 Not Found: " . htmlspecialchars($path);
+    exit;
+}
+
+// Refuse any path segment starting with a dot: blocks ../ traversal and dotfiles (.git, .htaccess)
+if (preg_match('#(^|/)\.#', $path)) {
+    not_found($path);
+}
+
+// Resolve to a real file and make sure it is inside the site root (catches symlinks pointing out)
+$root = realpath(__DIR__);
+function in_root($file, $root)
+{
+    $real = realpath($file);
+    return $real !== false && is_file($real) && strpos($real, $root . DIRECTORY_SEPARATOR) === 0;
+}
+
 $scriptPath = __DIR__ . $path;
 
 // Existing non-PHP files (CSS, JS, images, PDFs): let the built-in server send them as-is
-if (is_file($scriptPath) && pathinfo($scriptPath, PATHINFO_EXTENSION) !== 'php') {
+if (in_root($scriptPath, $root) && pathinfo($scriptPath, PATHINFO_EXTENSION) !== 'php') {
     return false;
 }
 
@@ -31,12 +51,12 @@ elseif (!is_file($scriptPath) && is_file($scriptPath . '.php')) {
     $scriptPath .= '.php';
 }
 
-// Check if the file exists and is a .php file
-if (is_file($scriptPath) && pathinfo($scriptPath, PATHINFO_EXTENSION) === 'php') {
+// Serve the PHP file if it is inside the site root and is not this router
+if (in_root($scriptPath, $root)
+    && pathinfo($scriptPath, PATHINFO_EXTENSION) === 'php'
+    && realpath($scriptPath) !== realpath(__FILE__)) {
     $_SERVER['PHP_SELF'] = '/' . basename($scriptPath);
     include $scriptPath;
 } else {
-    // Return 404 if file not found
-    http_response_code(404);
-    echo "404 Not Found: " . htmlspecialchars($path);
+    not_found($path);
 }
