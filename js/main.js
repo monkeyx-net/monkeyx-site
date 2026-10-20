@@ -40,6 +40,23 @@
     }
 
 
+    /* TABS – hash in the URL selects the tab, e.g. /oric-reference#parts */
+    const tabs = document.querySelectorAll('.tabs .tab');
+    if (tabs.length) {
+        function showTab() {
+            const hash = location.hash.slice(1);
+            const current = [...tabs].find(t => t.hash === '#' + hash) || tabs[0];
+            tabs.forEach(t => {
+                const on = t === current;
+                t.classList.toggle('active', on);
+                t.setAttribute('aria-selected', on);
+                document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+            });
+        }
+        window.addEventListener('hashchange', showTab);
+        showTab();
+    }
+
     /* CLOCK – only runs if #sys-time exists (home page) */
     const clockEl = document.getElementById('sys-time');
     if (clockEl) {

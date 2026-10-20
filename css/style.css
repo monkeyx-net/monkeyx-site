@@ -1281,3 +1281,33 @@ pre code {
         font-size: 0.82rem;
     }
 }
+
+/* TABS */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0 0.5rem;
+    border-bottom: 1px solid var(--green-dim);
+    padding-bottom: 0.5rem;
+}
+.tabs .tab {
+    font-size: 0.8rem;
+    color: var(--green);
+    border: 1px solid var(--green-dim);
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 1px;
+}
+.tabs .tab:hover {
+    color: var(--green-bright);
+    background: var(--bg-card);
+    border-color: var(--green);
+}
+.tabs .tab.active {
+    color: var(--bg);
+    background: var(--green);
+    border-color: var(--green-bright);
+}
+.tab-panel[hidden] {
+    display: none;
+}
