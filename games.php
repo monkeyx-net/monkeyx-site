@@ -66,6 +66,28 @@ require "includes/head.php";
         <div class="game-desc">A C/SDL2 port of the 1982 Williams twin-stick arcade classic, with waves and enemy pacing traced from the original ROM.</div>
         <a href="#" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="JOUST">
+        <div class="game-cover">
+            <a href="joust" class="cover-link"><img src="images/games/joust.webp" alt="Joust"></a>
+        </div>
+        <div class="game-title">JOUST</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">Linux · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of Williams' 1982 ostrich-riding classic, running the arcade ROM on an emulated board. Bring your own ROM set.</div>
+        <a href="joust" class="game-play">[INFO]</a>
+    </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="DEFENDER">
+        <div class="game-cover">
+            <a href="defender" class="cover-link"><img src="images/games/defender.webp" alt="Defender"></a>
+        </div>
+        <div class="game-title">DEFENDER</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">Linux · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of Williams' 1981 side-scrolling shooter, running the arcade ROM on an emulated board. Bring your own ROM set.</div>
+        <a href="defender" class="game-play">[INFO]</a>
+    </div>
     <div class="game-card" data-platforms="arcade genesis html5" data-rating="4" data-name="SPACE PATROL">
         <div class="game-cover">
             <a href="#" class="cover-link"><img src="https://placehold.co/400x200/051005/33ff33?text=SPACE+PATROL&font=playfair-display" alt="Space Patrol"></a>
