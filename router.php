@@ -37,6 +37,11 @@ if (in_root($scriptPath, $root) && pathinfo($scriptPath, PATHINFO_EXTENSION) !==
     return false;
 }
 
+// Folders with an index.html (the games under retro/games/): the built-in server sends the index
+if (is_dir($scriptPath) && in_root(rtrim($scriptPath, '/') . '/index.html', $root)) {
+    return false;
+}
+
 // Blog post URLs: /blog/{slug} → post.php?slug={slug}
 if (preg_match('#^/blog/([a-z0-9-]+)$#i', $path, $m)) {
     $_GET['slug'] = $m[1];

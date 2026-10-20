@@ -1,7 +1,7 @@
 <?php
 $page_title = "Defender";
 $current_page = "defender";
-$game_play_url = "https://github.com/monkeyx-net/defender/releases";
+$game_play_url = "retro/games/defender/";
 require "includes/head.php";
 ?>
 
@@ -31,9 +31,9 @@ require "includes/head.php";
                 <div class="game-title">DEFENDER</div>
                 <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
                 <div class="game-stars">★★★★★</div>
-                <div class="game-platform">Linux · Windows · PortMaster</div>
-                <div class="game-desc">Williams' 1981 side-scrolling shooter, running on an emulated arcade board. Bring your own MAME ROM set.</div>
-                <a href="<?= $game_play_url ?>" class="game-play">[DOWNLOAD]</a>
+                <div class="game-platform">HTML5 · Linux · Windows · PortMaster</div>
+                <div class="game-desc">Williams' 1981 side-scrolling shooter, running on an emulated arcade board. Play it in your browser.</div>
+                <a href="<?= $game_play_url ?>" class="game-play">[PLAY]</a>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@ require "includes/head.php";
     [EMU] ROM code on an emulated board, checked against MAME instruction traces<br>
     [GFX] presets: classic, classic-crt, crisp, smooth, hd-crisp, hd-smooth, hd-glow, hd-glow-crt<br>
     [SAVE] arcade CMOS (settings and high scores) saved to disk<br>
-    [ROM] your own MAME 'defender' set (defender.zip, red label); none is included
+    [ROM] native builds: your own MAME 'defender' set (defender.zip, red label); none is included
 </div>
 
 <h2>// CONTROLS</h2>

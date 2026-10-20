@@ -10,6 +10,8 @@ $game_urls = [
     "manic-miner" => "retro/games/manic-miner/",
     "space-invaders-part-ii" => "retro/games/space-invaders-part-ii/",
     "robotron" => "retro/games/robotron/",
+    "joust" => "retro/games/joust/",
+    "defender" => "retro/games/defender/",
 ];
 ?>
 <!DOCTYPE html>
