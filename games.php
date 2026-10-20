@@ -38,7 +38,7 @@ require "includes/head.php";
         <div class="game-stars">★★★★★</div>
         <div class="game-platform">HTML5 · Linux · Mac · Windows</div>
         <div class="game-desc">A faithful LOVE2D re-implementation of the classic arcade game Space Invaders Part II by Taito (1980).</div>
-        <a href="info" class="game-play">[INFO]</a>
+        <a href="space-invaders-part-ii" class="game-play">[INFO]</a>
     </div>
     <div class="game-card" data-platforms="platform" data-rating="5" data-name="MANIC MINER">
         <div class="game-cover">
@@ -64,7 +64,7 @@ require "includes/head.php";
         <div class="game-stars">★★★★★</div>
         <div class="game-platform">HTML5 · Linux · PortMaster</div>
         <div class="game-desc">A C/SDL2 port of the 1982 Williams twin-stick arcade classic, with waves and enemy pacing traced from the original ROM.</div>
-        <a href="#" class="game-play">[INFO]</a>
+        <a href="robotron" class="game-play">[INFO]</a>
     </div>
     <div class="game-card" data-platforms="arcade" data-rating="5" data-name="JOUST">
         <div class="game-cover">
