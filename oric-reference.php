@@ -64,6 +64,7 @@ CLOAD "" / CSAVE "name"        tape load / save</code></pre></div>
         ▸ <a href="/docs/oric/oric-service-manual.pdf">oric-service-manual.pdf</a> ... official Oric-1 and Atmos service manual (79 pages)<br>
         ▸ <a href="/docs/oric/oric-psu-repair.pdf">oric-psu-repair.pdf</a> ... replacing a snapped earth pin on the original PSU<br>
         ▸ <a href="/docs/oric/oric-microdisc-circuit-details.pdf">oric-microdisc-circuit-details.pdf</a> ... Microdisc controller component list<br>
+        ▸ <a href="/docs/oric/oric-1-schematic-issue7.pdf">oric-1-schematic-issue7.pdf</a> ... Oric-1/Atmos schematic redrawn in KiCad, Issue 7 (8 sheets: power, PSG/keyboard, DRAM/ROM, tape, PAL video, CPU/VIA, ULA)<br>
         ▸ <a href="/oric-repair-checklist">oric-repair-checklist</a> ... step-by-step mainboard repair checksheet, with photos (Mike Brown, <a href="https://oric.signal11.org.uk/html/repairguide.htm">oric.signal11.org.uk</a>)<br>
         <span class="cursor-blink"></span>
     </div>
@@ -86,6 +87,7 @@ CLOAD "" / CSAVE "name"        tape load / save</code></pre></div>
     </div>
 
     <p>Documents typed up and scanned by Steve Marshall. Many thanks to his site, <a href="http://www.48katmos.freeuk.com/">www.48katmos.freeuk.com</a>, for keeping this material available.</p>
+    <p>The KiCad schematic (Issue 7) is © 2014-2015 Manoel Trapier, 986 Studio. Thanks to 986 Studio for publishing it: <a href="https://www.986-studio.com/wp-content/uploads/2015/05/Oric1_Issue7.pdf">original PDF</a>.</p>
 </div>
 
 <div class="tab-panel" id="tab-parts" role="tabpanel">
