@@ -25,7 +25,7 @@ require 'includes/head.php';
 
 <hr class="section-divider">
 
-<h2>// C64 PROGRAMMING</h2>
+<h2>// C64 - HARDWARE</h2>
 <h3>Memory map &amp; background colour</h3>
 <div class="code-block"><pre><code>; Commodore 64: change background colour (green $0D)
 LDA #$0D
@@ -56,7 +56,7 @@ raster_isr:
 
 <hr class="section-divider">
 
-<h2>// AMIGA 500 – COPPER &amp; BLITTER</h2>
+<h2>// AMIGA 500 – HARDWARE</h2>
 <div class="command-line">
     <span class="prompt">amiga:~$</span> cat copper_notes.txt<br>
     Copper runs in sync with the beam – change colours mid-screen for free gradients.<br>
@@ -76,7 +76,7 @@ raster_isr:
 
 <hr class="section-divider">
 
-<h2>// ORIC-1 &amp; ATMOS</h2>
+<h2>// ORIC-1 &amp; ATMOS - HARDWARE</h2>
 <div class="command-line">
     <span class="prompt">oric:~$</span> cat oric.txt<br>
     Memory map, serial attributes, BASIC commands and parts: see the <a href="/oric-reference">Oric reference</a>.
