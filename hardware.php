@@ -74,4 +74,12 @@ raster_isr:
     AY-3-8912 sound chip, 3 channels. Tape and 3" disc storage.
 </div>
 
+<hr class="section-divider">
+
+<h2>// ORIC-1 &amp; ATMOS</h2>
+<div class="command-line">
+    <span class="prompt">oric:~$</span> cat oric.txt<br>
+    Memory map, serial attributes, BASIC commands and parts: see the <a href="/oric-reference">Oric reference</a>.
+</div>
+
 <?php require 'includes/footer.php'; ?>
