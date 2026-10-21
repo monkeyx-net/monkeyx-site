@@ -17,7 +17,7 @@ require "includes/head.php";
 
             <p>The game was inspired by the arcade title <em>Miner 2049er</em>, but Smith added a unique British surrealism and high-stakes platforming that made it an instant classic. Players guide Miner Willy through 20 increasingly difficult caverns, collecting keys to escape before his air supply runs out.</p>
 
-            <p>This is a C/SDL2 port based on the original ZX Spectrum version, started by fawtytoo. It adds per-pixel colouring with no colour clash, polyphonic music, stereo sound effects and fixes for the original's bugs. It runs in the browser, with touch controls on phones and tablets, and on Linux, Mac and Windows. Try the <a href="retro/games/manic-miner/editor/">Construction Kit</a> to build your own caverns.</p>
+            <p>This is the <strong>Manic Miner Construction Kit</strong>, a C/SDL2 port built on Steve Clark's (fawtytoo) SDL2 version of the original ZX Spectrum game. It adds a hi-res 512×256 playfield, OGG music and sound effects, five save-state slots, replay recording, an options menu, a demo mode and controller support. All 20 caverns are stored in a JSON file you can edit in the browser with the <a href="retro/games/manic-miner/editor/">level editor</a>. It runs in the browser, with touch controls on phones and tablets, and on Linux, Mac and Windows.</p>
         </div>
     </div>
 
@@ -51,22 +51,27 @@ require "includes/head.php";
     [AUDIO] "The Blue Danube" played via the internal 1-bit beeper.<br>
     [MEM] Fits entirely within 48KB of RAM, including all 20 levels.<br>
     <br>
-    [PORT] C + SDL2, based on the original ZX Spectrum version<br>
-    [GFX] per-pixel colouring (no colour clash), 16-colour palette, redrawn title screen<br>
-    [AUDIO] polyphonic music, stereo sound effects through a square-wave generator<br>
-    [FIXES] original bugs fixed, such as landing in a solid wall at the end of a jump<br>
-    [EDITOR] Manic Miner Construction Kit, in the browser
+    [PORT] C99 + SDL2, hard fork of Steve Clark's SDL2 port (zlib licence)<br>
+    [GFX] hi-res 512×256 playfield with 32×32 PNG sprites; 16-colour palette, per-pixel colouring (no colour clash)<br>
+    [AUDIO] SDL_mixer, OGG music and sound effects<br>
+    [LEVELS] all 20 caverns, NPCs and portals in levels.json<br>
+    [SAVE] 5 save-state slots, replay recording, per-level high scores<br>
+    [EDITOR] browser level editor: tiles, NPCs, portals, sprite designer, gap check<br>
+    [BUILDS] Linux x64/arm64, macOS arm64, Windows x64, WebAssembly
 </div>
 
 <h2>// CONTROLS</h2>
 <div class="command-line">
     <span class="prompt">$ cat controls.txt</span><br>
-    MOVE ....... Left Right (touch: ◀ ▶)<br>
-    JUMP ....... Space (touch: ▲)<br>
-    START ...... Enter (touch: ⏎)<br>
-    PAUSE ...... Tab (touch: ❚❚)<br>
-    MUSIC ...... Alt<br>
-    QUIT ....... Esc (touch: ✕)<br>
+    MOVE ....... D-pad / left stick ... Left Right (touch: ◀ ▶)<br>
+    JUMP ....... A or B ... Space (touch: ▲)<br>
+    START ...... A or Start ... Enter (touch: ⏎)<br>
+    PAUSE ...... X or LB ... Tab (touch: ❚❚)<br>
+    MUSIC ...... Y or RB ... Alt<br>
+    SAVE STATE . U (cycles slots 1-5)<br>
+    REPLAY ..... R (start / stop recording)<br>
+    TITLE ...... L load game, S high scores, O options<br>
+    BACK ....... B or Back ... Esc (touch: ✕)<br>
     <span class="cursor-blink"></span>
 </div>
 
@@ -75,7 +80,7 @@ require "includes/head.php";
 </p>
 
 <p>
-    <span class="prompt">>_</span> Source is on <a href="https://github.com/monkeyx-net/ManicMiner">GitHub</a>. Build your own caverns in the <a href="retro/games/manic-miner/editor/">Construction Kit</a>.
+    <span class="prompt">>_</span> Source, builds and release packages are on <a href="https://github.com/monkeyx-net/Manic-Miner-Construction">GitHub</a>. Build your own caverns in the <a href="retro/games/manic-miner/editor/">level editor</a>.
 </p>
 
 <?php require "includes/footer.php"; ?>
