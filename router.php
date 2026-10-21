@@ -13,12 +13,12 @@ if ($path === '/' || $path === '') {
 function not_found($path)
 {
     http_response_code(404);
-    echo "404 Not Found: " . htmlspecialchars($path);
+    echo "404 Not Found";
     exit;
 }
 
 // Refuse any path segment starting with a dot: blocks ../ traversal and dotfiles (.git, .htaccess)
-if (preg_match('#(^|/)\.#', $path)) {
+if (preg_match('#(^|/)\.#', $path) || strpos($path, '..') !== false) {
     not_found($path);
 }
 

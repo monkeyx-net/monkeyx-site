@@ -14,7 +14,13 @@ usort($posts, fn($a, $b) => strcmp($b['date'], $a['date']));
 $posts = array_slice($posts, 0, 20);
 
 $scheme   = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$base_url = $scheme . '://' . $_SERVER['HTTP_HOST'];
+// Use configured host or fallback to safe default
+$allowed_hosts = ['monkeyx.net', 'www.monkeyx.net', 'localhost', '127.0.0.1'];
+$host = $_SERVER['HTTP_HOST'] ?? 'monkeyx.net';
+if (!in_array($host, $allowed_hosts, true)) {
+    $host = 'monkeyx.net';
+}
+$base_url = $scheme . '://' . $host;
 
 header('Content-Type: application/rss+xml; charset=utf-8');
 

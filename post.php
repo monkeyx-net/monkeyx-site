@@ -1,8 +1,9 @@
 <?php
 $slug = preg_replace('/[^a-z0-9-]/', '', $_GET['slug'] ?? '');
-$post_file = __DIR__ . '/posts/' . $slug . '.php';
+$post_file = realpath(__DIR__ . '/posts/' . $slug . '.php');
+$posts_dir = realpath(__DIR__ . '/posts');
 
-if (!$slug || !file_exists($post_file)) {
+if (!$slug || !$post_file || !$posts_dir || strpos($post_file, $posts_dir . DIRECTORY_SEPARATOR) !== 0 || !file_exists($post_file)) {
     http_response_code(404);
     $page_title   = "Post Not Found";
     $current_page = "blog";
