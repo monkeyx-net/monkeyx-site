@@ -53,6 +53,19 @@ require "includes/head.php";
         <div class="game-desc">One of the best original platform games. Orginal game by Matthew Smith. Check the level editor!</div>
         <a href="manic-miner" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="platform" data-rating="5" data-name="JET SET WILLY">
+        <div class="game-cover">
+            <a href="<?= $game_urls[
+                "jet-set-willy"
+            ] ?>" class="cover-link"><img src="images/games/jet_set_willy.webp" alt="Jet Set Willy"></a>
+        </div>
+        <div class="game-title">JET SET WILLY</div>
+        <span class="game-tag">PLATFORM</span><span class="game-tag">1P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · Mac · Windows</div>
+        <div class="game-desc">The sequel to Manic Miner: tidy all 60 rooms of Willy's mansion before midnight. Original game by Matthew Smith. Check the level editor!</div>
+        <a href="jet-set-willy" class="game-play">[INFO]</a>
+    </div>
     <div class="game-card" data-platforms="arcade" data-rating="5" data-name="ROBOTRON: 2084">
         <div class="game-cover">
             <a href="<?= $game_urls[

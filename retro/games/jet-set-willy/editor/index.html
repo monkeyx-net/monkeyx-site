@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jet Set Willy Construction Kit</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- ── Header ─────────────────────────────────────────────────────────── -->
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-gem">🎩</span>
+                <span>JET SET WILLY CONSTRUCTION KIT</span>
+            </div>
+            <div class="header-actions">
+                <button id="btn-import" class="btn">📂 Import JSON</button>
+                <button id="btn-export" class="btn btn-primary">💾 Export JSON</button>
+                <input type="file" id="file-input" accept=".json" hidden />
+            </div>
+        </header>
+
+        <!-- ── Workspace ──────────────────────────────────────────────────────── -->
+        <div class="workspace">
+            <!-- Room list: the game finds some rooms by number, so there are always 60 -->
+            <aside class="panel panel-levels">
+                <div class="panel-header">Rooms</div>
+                <div id="room-list" class="level-list"></div>
+            </aside>
+
+            <!-- Main editor -->
+            <main class="editor-main">
+                <div class="toolbar">
+                    <div class="tool-group">
+                        <button class="tool-btn active" data-tool="paint" title="Paint tile (Q)">🖌 Paint</button>
+                        <button class="tool-btn" data-tool="erase" title="Erase tile to slot 0 (W)">◻ Erase</button>
+                        <button class="tool-btn" data-tool="fill" title="Flood fill (F)">🪣 Fill</button>
+                        <button class="tool-btn" data-tool="item" title="Add or remove an item (I)">💎 Item</button>
+                        <button class="tool-btn" data-tool="npc" title="Place or select an NPC (R)">🤖 NPC</button>
+                        <button class="tool-btn" data-tool="rope" title="Hang or move the rope (O)">🪢 Rope</button>
+                        <button class="tool-btn" data-tool="start" title="Put Willy's start here (S)">🎩 Start</button>
+                    </div>
+                    <div class="tool-sep"></div>
+                    <div class="tool-group">
+                        <span class="tool-label">Zoom</span>
+                        <button id="zoom-out" class="btn btn-sm" title="Zoom out (-)">−</button>
+                        <span id="zoom-label" class="zoom-label">3×</span>
+                        <button id="zoom-in" class="btn btn-sm" title="Zoom in (+)">+</button>
+                    </div>
+                    <div class="tool-sep"></div>
+                    <div class="tool-group">
+                        <label class="checkbox-row"><input type="checkbox" id="show-grid" checked /> Grid</label>
+                        <label class="checkbox-row"><input type="checkbox" id="show-sprites" checked /> Sprites</label>
+                        <label class="checkbox-row"><input type="checkbox" id="show-paths" checked /> Paths</label>
+                    </div>
+                </div>
+
+                <div class="canvas-scroll" id="canvas-scroll">
+                    <div class="canvas-container">
+                        <canvas id="room-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="level-meta">
+                    <label>Name
+                        <input type="text" id="room-name" class="input-text" maxlength="63" placeholder="Room name…" />
+                    </label>
+                    <label>Border
+                        <select id="room-border" class="input-sel"></select>
+                    </label>
+                    <label>Up <select id="exit-0" class="input-sel exit-sel"></select></label>
+                    <label>Right <select id="exit-1" class="input-sel exit-sel"></select></label>
+                    <label>Down <select id="exit-2" class="input-sel exit-sel"></select></label>
+                    <label>Left <select id="exit-3" class="input-sel exit-sel"></select></label>
+                </div>
+                <div id="room-note" class="hint-text room-note"></div>
+            </main>
+
+            <!-- Properties -->
+            <aside class="panel panel-props">
+                <div id="npc-props" style="display: none">
+                    <div class="panel-header">NPC <span id="npc-slot"></span></div>
+                    <div class="props-section">
+                        <div class="prop-row"><label>Move <select id="npc-move" class="input-sel"></select></label></div>
+                        <div class="prop-row"><label>Draw <select id="npc-draw" class="input-sel"></select></label></div>
+                        <div class="prop-row">
+                            <label>X <input type="number" id="npc-x" class="input-num" min="0" max="255" /></label>
+                            <label>Y px <input type="number" id="npc-y" class="input-num" min="0" max="112" /></label>
+                        </div>
+                        <div class="prop-row" id="npc-range">
+                            <label>Min <input type="number" id="npc-min" class="input-num" min="0" max="127" /></label>
+                            <label>Max <input type="number" id="npc-max" class="input-num" min="0" max="127" /></label>
+                        </div>
+                        <div class="prop-row"><label>Speed <input type="number" id="npc-speed" class="input-num" min="0" max="16" /></label></div>
+                        <div class="prop-row"><label>Sprite <select id="npc-sprite" class="input-sel"></select></label></div>
+                        <div class="prop-row"><label>Ink <select id="npc-ink" class="input-sel"></select></label></div>
+                        <div class="prop-row">
+                            <label>Frame <input type="number" id="npc-frame" class="input-num" min="0" max="7" /></label>
+                            <label>Mask <select id="npc-mask" class="input-sel">
+                                <option value="0">1 frame</option><option value="1">2 frames</option>
+                                <option value="3">4 frames</option><option value="7">8 frames</option>
+                                <option value="2">frames 0 &amp; 2</option>
+                            </select></label>
+                        </div>
+                        <div class="prop-row"><label>Update <input type="number" id="npc-update" class="input-num" min="0" max="3" /></label></div>
+                        <p class="hint-text" id="npc-hint"></p>
+                        <div class="prop-row"><button id="btn-del-npc" class="btn btn-sm btn-danger">Delete NPC</button></div>
+                        <canvas id="npc-preview" class="npc-preview" width="64" height="64"></canvas>
+                    </div>
+                </div>
+
+                <div id="rope-props" style="display: none">
+                    <div class="panel-header">Rope</div>
+                    <div class="props-section">
+                        <p class="hint-text">Click the top row to hang the rope (columns 12–19: it swings 96 pixels either side).</p>
+                        <div class="prop-row"><label>Ink <select id="rope-ink" class="input-sel"></select></label></div>
+                        <div class="prop-row"><button id="btn-del-rope" class="btn btn-sm btn-danger">Remove rope</button></div>
+                    </div>
+                </div>
+
+                <div id="start-props" style="display: none">
+                    <div class="panel-header">Willy's start</div>
+                    <div class="props-section">
+                        <p class="hint-text">Click a cell to start Willy there, in this room. The game starts in <span id="start-room"></span>.</p>
+                    </div>
+                </div>
+
+                <div id="tool-help">
+                    <div class="panel-header">Tools</div>
+                    <div class="props-section">
+                        <p class="hint-text">
+                            <strong>Paint (Q)</strong> — paint the selected slot<br />
+                            <strong>Erase (W)</strong> — set cells to slot 0<br />
+                            <strong>Fill (F)</strong> — flood fill<br />
+                            <strong>Item (I)</strong> — add or remove an item (12 a room)<br />
+                            <strong>NPC (R)</strong> — click a free cell to add one (8 a room), an NPC to select it<br />
+                            <strong>Rope (O)</strong> — hang the room's rope<br />
+                            <strong>Start (S)</strong> — Willy's start<br /><br />
+                            <strong>Left-click a slot</strong> — paint with it<br />
+                            <strong>Right-click a slot</strong> — design it<br />
+                            <strong>Right-click the room</strong> — erase
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- ── Bottom: tile slots, tile designer, sprite designer ─────────────── -->
+        <div class="bottom-panel">
+            <div class="gfx-palette-section">
+                <div class="section-header">
+                    Tile slots <span class="hint-small">left-click = paint &nbsp;|&nbsp; right-click = design</span>
+                </div>
+                <div id="gfx-slots" class="gfx-slots-grid"></div>
+            </div>
+
+            <div class="designer-section">
+                <div class="section-header">Tile — slot <span id="designer-slot-num">0</span></div>
+                <div class="designer-layout">
+                    <canvas id="tile-designer" width="128" height="128" title="Left-drag sets pixels · right-drag clears them"></canvas>
+                    <div class="designer-controls">
+                        <div class="ctrl-row"><label class="stack">Type <select id="tile-type" class="input-sel"></select></label></div>
+                        <div class="ctrl-row">
+                            <label class="stack">Paper <select id="tile-paper" class="input-sel"></select></label>
+                            <label class="stack">Ink <select id="tile-ink" class="input-sel"></select></label>
+                        </div>
+                        <div class="ctrl-row"><label class="checkbox-row"><input type="checkbox" id="tile-flash" /> Flashing</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="designer-section">
+                <div class="section-header">
+                    Sprite — <span id="sprite-title"></span> frame <span id="sprite-frame-num">0</span>
+                </div>
+                <div class="designer-layout">
+                    <canvas id="sprite-designer" width="192" height="192" title="Left-drag sets pixels · right-drag clears them"></canvas>
+                    <div class="designer-controls">
+                        <div class="ctrl-row">
+                            <label class="stack">Sprite <select id="sprite-sel" class="input-sel"></select></label>
+                            <label class="stack">Frame <input type="number" id="sprite-frame-sel" class="input-num" min="0" max="15" value="0" /></label>
+                        </div>
+                        <div class="ctrl-row">
+                            <button id="btn-sprite-new" class="btn btn-sm btn-success" title="Add an NPC sprite">New</button>
+                            <button id="btn-sprite-clear" class="btn btn-sm btn-danger">Clear</button>
+                            <button id="btn-sprite-copy" class="btn btn-sm">Copy</button>
+                            <button id="btn-sprite-paste" class="btn btn-sm">Paste</button>
+                        </div>
+                        <div class="ctrl-row">
+                            <button id="btn-sprite-flip-h" class="btn btn-sm">Flip H</button>
+                            <button id="btn-sprite-flip-v" class="btn btn-sm">Flip V</button>
+                        </div>
+                        <canvas id="sprite-strip" width="256" height="32" title="Click a frame to edit it"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="js/app.js"></script>
+    </body>
+</html>
