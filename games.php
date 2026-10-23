@@ -101,6 +101,28 @@ require "includes/head.php";
         <div class="game-desc">A C/SDL2 port of Williams' 1981 side-scrolling shooter, running the arcade ROM on an emulated board. Play it in your browser.</div>
         <a href="defender" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="GALAGA">
+        <div class="game-cover">
+            <a href="<?= $game_urls["galaga"] ?>" class="cover-link"><img src="images/games/galaga.webp" alt="Galaga"></a>
+        </div>
+        <div class="game-title">GALAGA</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · Mac · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of Namco's 1981 shooter, rewritten in C and checked frame by frame against the arcade board. Play it in your browser.</div>
+        <a href="galaga" class="game-play">[INFO]</a>
+    </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="GALAXIAN">
+        <div class="game-cover">
+            <a href="<?= $game_urls["galaxian"] ?>" class="cover-link"><img src="images/games/galaxian.webp" alt="Galaxian"></a>
+        </div>
+        <div class="game-title">GALAXIAN</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · Mac · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of Namco's 1979 swarm shooter, rewritten in C and checked frame by frame against the arcade board. Play it in your browser.</div>
+        <a href="galaxian" class="game-play">[INFO]</a>
+    </div>
 </div>
 
 <div class="command-line">

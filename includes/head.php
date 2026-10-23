@@ -13,6 +13,8 @@ $game_urls = [
     "robotron" => "retro/games/robotron/",
     "joust" => "retro/games/joust/",
     "defender" => "retro/games/defender/",
+    "galaga" => "retro/games/galaga/",
+    "galaxian" => "retro/games/galaxian/",
 ];
 ?>
 <!DOCTYPE html>
