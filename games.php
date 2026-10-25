@@ -134,6 +134,17 @@ require "includes/head.php";
         <div class="game-desc">A C/SDL2 port of Tehkan's 1984 vertical shooter, rewritten in C and checked frame by frame against the arcade board. Play it in your browser.</div>
         <a href="starforce" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="platform" data-rating="5" data-name="H.E.R.O.">
+        <div class="game-cover">
+            <a href="<?= $game_urls["hero"] ?>" class="cover-link"><img src="images/games/hero.webp" alt="H.E.R.O."></a>
+        </div>
+        <div class="game-title">H.E.R.O.</div>
+        <span class="game-tag">PLATFORM</span><span class="game-tag">1P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · Mac · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of the C64 version of Activision's 1984 mine-rescue classic, every routine checked against the original 6502 code. Play it in your browser.</div>
+        <a href="hero" class="game-play">[INFO]</a>
+    </div>
 </div>
 
 <div class="command-line">
