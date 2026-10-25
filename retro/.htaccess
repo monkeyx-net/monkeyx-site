@@ -1,0 +1,7 @@
+<IfModule mod_headers.c>
+    # Game builds (index.js/.wasm/.data) are replaced in place and only work as a set:
+    # revalidate on every load so a cached index.js never meets a newer index.wasm/.data
+    <FilesMatch "\.(html|js|wasm|data)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
