@@ -123,6 +123,17 @@ require "includes/head.php";
         <div class="game-desc">A C/SDL2 port of Namco's 1979 swarm shooter, rewritten in C and checked frame by frame against the arcade board. Play it in your browser.</div>
         <a href="galaxian" class="game-play">[INFO]</a>
     </div>
+    <div class="game-card" data-platforms="arcade" data-rating="5" data-name="STAR FORCE">
+        <div class="game-cover">
+            <a href="<?= $game_urls["starforce"] ?>" class="cover-link"><img src="images/games/starforce.webp" alt="Star Force"></a>
+        </div>
+        <div class="game-title">STAR FORCE</div>
+        <span class="game-tag">ARCADE</span><span class="game-tag">1-2P</span>
+        <div class="game-stars">★★★★★</div>
+        <div class="game-platform">HTML5 · Linux · Mac · Windows · PortMaster</div>
+        <div class="game-desc">A C/SDL2 port of Tehkan's 1984 vertical shooter, rewritten in C and checked frame by frame against the arcade board. Play it in your browser.</div>
+        <a href="starforce" class="game-play">[INFO]</a>
+    </div>
 </div>
 
 <div class="command-line">

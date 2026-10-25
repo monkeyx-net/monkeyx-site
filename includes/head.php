@@ -15,6 +15,7 @@ $game_urls = [
     "defender" => "retro/games/defender/",
     "galaga" => "retro/games/galaga/",
     "galaxian" => "retro/games/galaxian/",
+    "starforce" => "retro/games/starforce/",
 ];
 ?>
 <!DOCTYPE html>
